@@ -1,0 +1,82 @@
+* { box-sizing: border-box; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+body, input, textarea, button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+form {
+  margin: 3rem 0;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  box-shadow: 28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 0;
+}
+
+input {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff;
+}
+
+@media only screen and (min-width: 600px) {
+  form {
+    padding: 4rem 3rem;
+  }
+  
+  input {
+    width: 8rem;
+    height: 4rem;
+    font-size: 3rem; 
+  }
+  
+  input + input {
+    margin-left: 1rem;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#btn {
+  width: 60px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, green, #64f211);  
+  box-shadow: 28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff;
+}
