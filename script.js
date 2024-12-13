@@ -1,11 +1,50 @@
 // sample: https://codepen.io/davebitter/pen/VweaZqY
 
+// pivot is all keys [2, 3, 4, 5, 6, 7, 8, 9],
+let tables = {
+  2: [4, 6, 8, 10, 12, 14, 16, 18],
+  3: [6, 9, 12, 15, 18, 21, 24, 27],
+  4: [16, 20, 24, 28, 32, 36],
+  5: [20, 25, 30, 35, 40, 45],
+  6: [24, 30, 36, 42, 48, 54],
+  7: [28, 35, 42, 49, 56, 63],
+  8: [32, 40, 48, 56, 64, 72],
+  9: [36, 45, 54, 63, 72, 81],
+};
+// Step 1: Get a random key from tables
+const randomIndex = Math.floor(Math.random() * Object.keys(tables).length);
+const randomKey = Object.keys(tables)[randomIndex];
+const randomValue = tables[randomKey][Math.floor(Math.random() * tables[randomKey].length)];
+// Step 2: Find the key that contains the random value
+const findKey = (value) => {
+  for (const key in tables) {
+    if (tables[key].includes(value)) {
+      return key;
+    }
+  }
+  return null; // If not found (though this shouldn't happen)
+};
+
+const mainKey = findKey(randomValue);
+
+console.log(`Random Value: ${randomValue}`);
+console.log(`Main Key: ${mainKey}`);
+
+
+
+// ["*",":","+","-"]
+let randOperator = ["*",":"][Math.round(Math.random())];
+
+document.getElementById('operator').value= randOperator;
+
 // Set default values
-document.getElementById('aa').value=Math.floor(Math.random() * 8) + 2;
-
-document.getElementById('bb').value=Math.floor(Math.random() * 8) + 2;
-
-document.getElementById('operator').value=["*",":"][Math.round(Math.random())]
+if ( randOperator == "*" ) {
+  document.getElementById('aa').value=Math.floor(Math.random() * 8) + 2;
+  document.getElementById('bb').value=Math.floor(Math.random() * 8) + 2;
+} else if (randOperator == ":") {
+    document.getElementById('aa').value= randomValue;
+    document.getElementById('bb').value= mainKey;
+}
 
 
 // console.log('firstVal');
