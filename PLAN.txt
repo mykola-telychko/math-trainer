@@ -1,1 +1,19 @@
-theme switcher (dark/light)
+- theme switcher (dark/light)
+
+- laws of arithmetic
+
+- collect list expls
+
+- type education: cards, tests, quiz, 
+
+- short video explenation
+
+- text material: books, tables, tips 
+
+- olimpiad tasks 
+
+- work with tree js and 3d model 
+
+- unique gif examples
+
+- page of tree with full math history in persons
