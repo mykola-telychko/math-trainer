@@ -81,6 +81,24 @@ input[type=number] {
   box-shadow: 28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff;
 }
 
+#btn-info {
+  width: 60px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, #e6b000, #ffdd00);
+  box-shadow: 28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff;
+}
+
+
+#btn-next {
+  width: 70px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(145deg, #3a66cc, #6894ce);
+  box-shadow: 28px 28px 56px #d9d9d9, -28px -28px 56px #ffffff;
+}
+
+
  /* INDICATORS */
 /* 
 body {
