@@ -99,7 +99,7 @@ input[type=number] {
 }
 
 
- /* INDICATORS */
+ /* INDICATORS -- start */
 /* 
 body {
   background: #1d1f20;
@@ -163,4 +163,116 @@ body {
   border: 1px solid #bfc2ca;
   box-shadow: 0 0 10px #dfe1e9;
 }
- /* INDICATORS */
+ /* INDICATORS -- end */
+
+ 
+
+
+ html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-color: #f4f4f4;
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+}
+.wrapper {
+	margin: 0 auto;
+	/* min-width: 600px;
+	max-width: 920px; */
+	position: relative;
+
+	&.blur {
+		filter: blur(4px);
+	}
+}
+.content-wrapper {
+	&:last-child {
+		margin-bottom: 100px;
+	}
+}
+
+.grid-container {
+	padding: 20px;
+	.gc-1 {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-gap: 40px;
+	/* 	@media screen and (max-width: 550px) {
+		  grid-template-columns: 1fr;
+		} */
+		
+/* 		@media screen and (min-width: 550px) and (max-width: 950px) {
+		  grid-template-columns: 1fr 1fr;
+		} */
+	}
+
+	.grid {
+		height: 500px;
+        width: 600px;
+      
+		padding: 20px;
+		border: 1px solid #f4f4f4;
+		border-radius: 15px;
+		box-shadow: 2px 2px 40px -12px #999;
+		cursor: pointer;
+		position: relative;
+
+		.upper-headline {
+			text-transform: uppercase;
+			font-size: .8em;
+			word-spacing: 2px;
+			color: #999;
+			margin-bottom: 5px;
+		}
+		.headline {
+			font-size: 1.5em;
+			font-weight: 900;
+			line-height: 1.3;
+			margin-bottom: 5px;
+		}
+		.content {
+			&.atd {
+				margin-top: 30px;
+				text-transform: uppercase;
+				font-size: 3em;
+				font-weight: 900;
+			}
+		}
+
+		.footline {
+			font-size: .85em;
+			position: absolute;
+			bottom: 15px;
+			font-family: 'Raleway', sans-serif;
+			.head {
+				font-weight: 900;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+/* TABLE -- start */ 
+     table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+/* TABLE -- start */ 
+
