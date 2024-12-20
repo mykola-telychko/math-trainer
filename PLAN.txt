@@ -17,3 +17,7 @@
 - unique gif examples
 
 - page of tree with full math history in persons
+
+// HP: 
+- overlay font style (3 font version)
+- sidebar for body

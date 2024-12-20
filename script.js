@@ -155,3 +155,59 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 // numberCodeForm.addEventListener('input', handleInput);
 // numberCodeForm.addEventListener('keydown', handleKeyDown);
 
+
+
+// KEYBOARD --- START
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize state
+  let isCapsLock = false;
+
+  // Function to check if a string contains Chinese characters
+  function containsChinese(str) {
+    return /[\u4e00-\u9fa5]/.test(str);
+  }
+
+  // Prevent Chinese characters in the textarea
+  const enterInput = document.getElementById("enter");
+  enterInput.addEventListener("input", function() {
+    let value = enterInput.value;
+    if (containsChinese(value)) {
+      enterInput.value = value.replace(/[\u4e00-\u9fa5]/g, "");
+    }
+  });
+
+  // Handle keyboard button clicks
+  document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("but")) {
+      let text = event.target.getAttribute("name");
+
+      // Special handling for space key
+      if (event.target.classList.contains("space")) {
+        text = " ";
+      }
+
+      if (text) {
+        text = isCapsLock ? text.toUpperCase() : text.toLowerCase();
+        enterInput.value += text;
+      }
+    }
+  });
+
+  // Handle delete button
+  document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("delete")) {
+      let currentText = enterInput.value;
+      enterInput.value = currentText.slice(0, -1);
+    }
+  });
+
+  // Handle caps lock toggle
+  document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("capslock")) {
+      isCapsLock = !isCapsLock;
+      document.querySelector(".circle").classList.toggle("circle-light");
+    }
+  });
+});
+
+// KEYBOARD --- END
