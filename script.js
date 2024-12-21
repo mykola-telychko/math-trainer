@@ -92,63 +92,7 @@ const handleKeyDown = e => {
   
   const hasPreviousIndex = previousIndex >= 0;
   const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
-  
-//   switch(code) {
-//     case 'ArrowLeft':
-//     case 'ArrowUp':
-//       if (hasPreviousIndex) {
-//         numberCodeInputs[previousIndex].focus();
-//       }
-//       e.preventDefault();
-//       break;
-      
-//     case 'ArrowRight':
-//     case 'ArrowDown':
-//       if (hasNextIndex) {
-//         numberCodeInputs[nextIndex].focus();
-//       }
-//       e.preventDefault();
-//       break;
-//     case 'Backspace':
-//       if (!e.target.value.length && hasPreviousIndex) {
-//         numberCodeInputs[previousIndex].value = null;
-//         numberCodeInputs[previousIndex].focus();
-//       }
-//       break;
-//     default:
-//       break;
-//   }
 }
-
-document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
-
-    // Get form values
-    const aa = document.getElementById('aa').value;
-    const bb = document.getElementById('bb').value;
-    const myResult = parseInt(document.getElementById('result').value);
-    const operator = document.getElementById('operator').value;
-  
-  let correctResult
-  if (operator == '*') {
-      correctResult = aa * bb;
-        console.log(aa, bb, correctResult, myResult, correctResult == myResult);
-  } else {
-      correctResult = aa / bb;
-        console.log(aa, bb, correctResult, myResult, correctResult == myResult);
-  }
-    // console.log(aa, bb, operator);
-  
-  
-    // Display the result
-    // document.getElementById('result').innerHTML = `
-    //     <h2>Submitted Data:</h2>
-    //     <p><strong>Name:</strong> ${name}</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    // `;
-
-    // Optionally, you can handle the data here (e.g., send it to a server)
-});
 
 
 // Event listeners
@@ -161,7 +105,6 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 document.addEventListener("DOMContentLoaded", function() {
   // Initialize state
   let isCapsLock = false;
-
   // Function to check if a string contains Chinese characters
   function containsChinese(str) {
     return /[\u4e00-\u9fa5]/.test(str);
@@ -185,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (event.target.classList.contains("space")) {
         text = " ";
       }
-
       if (text) {
         text = isCapsLock ? text.toUpperCase() : text.toLowerCase();
         enterInput.value += text;
@@ -208,6 +150,58 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelector(".circle").classList.toggle("circle-light");
     }
   });
-});
 
+  // Initially hide all indicators except offline
+  const indicators = document.querySelector(".indicators");
+
+  indicators.querySelectorAll(".indicator").forEach(indicator => {
+    if (!indicator.classList.contains("--offline")) {
+      indicator.style.display = "none";
+    }
+  });
+
+  const updateIndicators = (status) => {
+    indicators.querySelectorAll(".indicator").forEach(indicator => {
+      indicator.style.display = "none";
+    });
+
+    const targetClass = status === true ? "--succes" : status === false ? "--error" : "--offline";
+    const targetIndicator = indicators.querySelector(`.indicator.${targetClass}`);
+    if (targetIndicator) {
+      targetIndicator.style.display = "inline-block";
+    }
+  };
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+      // Get form values
+      const aa = document.getElementById('aa').value;
+      const bb = document.getElementById('bb').value;
+      const myResult = parseInt(document.getElementById('result').value);
+      const operator = document.getElementById('operator').value;
+    let correctResult
+    if (operator == '*') {
+        correctResult = aa * bb;
+          console.log(aa, bb, correctResult, myResult, correctResult == myResult);
+    } else {
+        correctResult = aa / bb;
+          console.log(aa, bb, correctResult, myResult, correctResult == myResult);
+    }
+    updateIndicators(correctResult == myResult);
+
+      // console.log(aa, bb, operator);
+      // Display the result
+      // document.getElementById('result').innerHTML = `
+      //     <h2>Submitted Data:</h2>
+      //     <p><strong>Name:</strong> ${name}</p>
+      //     <p><strong>Email:</strong> ${email}</p>
+      // `;
+  
+      // Optionally, you can handle the data here (e.g., send it to a server)
+  });
+});
 // KEYBOARD --- END
+
+function skipExpression() {
+
+}
