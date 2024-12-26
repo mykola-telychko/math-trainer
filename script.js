@@ -111,12 +111,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Prevent Chinese characters in the textarea
-  const enterInput = document.getElementById("enter");
+  const enterInput = document.getElementById("result");
   enterInput.addEventListener("input", function() {
     let value = enterInput.value;
     if (containsChinese(value)) {
       enterInput.value = value.replace(/[\u4e00-\u9fa5]/g, "");
     }
+  });
+
+  const clearInput = document.getElementById("x");
+  clearInput.addEventListener("input", function() {
+      clearInput.value = "";
   });
 
   // Handle keyboard button clicks
