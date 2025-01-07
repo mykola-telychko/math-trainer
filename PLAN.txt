@@ -19,5 +19,6 @@
 - page of tree with full math history in persons
 
 // HP: 
-- overlay font style (3 font version)
+- counter tasks and select for qty task-laps (1-5)
+- switcher (mltpl, division, mix)
 - sidebar for body

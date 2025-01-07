@@ -94,12 +94,9 @@ const handleKeyDown = e => {
   const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
 }
 
-
 // Event listeners
 // numberCodeForm.addEventListener('input', handleInput);
 // numberCodeForm.addEventListener('keydown', handleKeyDown);
-
-
 
 // KEYBOARD --- START
 document.addEventListener("DOMContentLoaded", function() {

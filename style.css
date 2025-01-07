@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 
 body {
-  height: 600vh; /* Set a height greater than the viewport height */
+  /* height: 600vh; Set a height greater than the viewport height */
   overflow-y: scroll; /* Enable vertical scrolling */
   display: flex;
   flex-direction: column;
@@ -9,6 +9,12 @@ body {
   align-items: center;
   /* min-height: 100vh; */
   padding: 1rem;
+}
+
+.fx-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* Optional: Customize scrollbar style */
