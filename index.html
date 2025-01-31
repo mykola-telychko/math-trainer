@@ -45,9 +45,10 @@
          <div class="keyboard">
           <div class="container">
             <div class="button-1">
-              <div class="but but-top esc">TAB</div>
-              <div class="but but-top F1">ALT</div>
-              <div class="but but-top F3">NEW</div>
+              <div class="but but-top esc" onclick="showTab()" >TAB</div>
+              <div class="but but-top F1" onclick="loadAlt()">ALT</div>
+              <div class="but but-top F3" onclick="resetExercise()">RESET</div>
+              <div class="but but-top F3" onclick="startNewExercise()">NEW</div>
             </div>
             <div class="button-2">
               <div class="but 1" name="1">1</div>
@@ -78,7 +79,7 @@
 
     <p>Tip: You can paste.</p>
 
-    <div class="grid-container">
+    <div class="grid-container" id="pythaTab" hidden="hidden">
       <div class="gc-1">
           <div class="grid g1">
           <div class="upper-headline">Pythagorean Multiplication Table</div>

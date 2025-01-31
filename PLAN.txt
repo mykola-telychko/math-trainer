@@ -1,3 +1,5 @@
+- simple design (primitive design)
+
 - theme switcher (dark/light)
 
 - laws of arithmetic
@@ -22,3 +24,5 @@
 - counter tasks and select for qty task-laps (1-5)
 - switcher (mltpl, division, mix)
 - sidebar for body
+
+--------------------------

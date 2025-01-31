@@ -17,6 +17,10 @@ body {
   justify-content: center;
 }
 
+.fx-col input {
+  cursor: pointer;
+}
+
 /* Optional: Customize scrollbar style */
 ::-webkit-scrollbar {
   width: 10px; 

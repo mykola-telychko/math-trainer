@@ -207,3 +207,29 @@ document.addEventListener("DOMContentLoaded", function() {
 function skipExpression() {
 
 }
+
+function showTab() {
+  console.log('showTab');
+
+  const tab = document.getElementById("pythaTab");
+  if (tab.style.display === "none" || tab.style.display === "") {
+    tab.style.display = "block"; // Показуємо блок
+  } else {
+    tab.style.display = "none"; // Приховуємо блок
+  }
+}
+
+function loadAlt() {
+  alert('loadAlt');
+  console.log('showTab');
+}
+
+function resetExercise() {
+  alert('resetExercise');
+  console.log('resetExercise');
+}
+
+function startNewExercise() {
+  alert('startNewExercise');
+  console.log('startNewExercise');
+}
