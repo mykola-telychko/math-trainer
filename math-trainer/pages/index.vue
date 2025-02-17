@@ -29,6 +29,7 @@
   </template>
   
   <script setup>
+
   const { $supabase } = useNuxtApp();
   
   const email = ref('');
@@ -37,6 +38,8 @@
   const tasks = ref([]);
   const newTask = ref('');
   
+
+
   // Перевірка автентифікації
   const checkAuth = async () => {
     const { data: { user: authUser } } = await $supabase.auth.getUser();

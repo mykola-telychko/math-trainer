@@ -9,3 +9,6 @@ CREATE TABLE tasks (
   title TEXT NOT NULL,
   user_id UUID REFERENCES auth.users NOT NULL
 );
+
+SUPABASE_URL=https://wejpfauhhcvcgsrbsqzd.supabase.co
+SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndlanBmYXVoaGN2Y2dzcmJzcXpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgxNTYxODYsImV4cCI6MjA1MzczMjE4Nn0.keYoHWQWfvdQHwr-wya0REFtSWMx4n_gxsEvc2Tdfqk
