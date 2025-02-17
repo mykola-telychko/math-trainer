@@ -1,0 +1,11 @@
+npx nuxi init math-trainer 
+cd math-trainer 
+npm run dev
+npm install @supabase/supabase-js --save
+
+
+CREATE TABLE tasks (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  user_id UUID REFERENCES auth.users NOT NULL
+);
