@@ -1,3 +1,6 @@
+- ERROR : nuxt doest see  .env 
+- ERROR : doest work CRUD
+
 - simple design (primitive design)
 
 - theme switcher (dark/light)

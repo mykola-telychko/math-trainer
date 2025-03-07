@@ -36,10 +36,13 @@
 
 <script setup>
 const { $supabase } = useNuxtApp();
-// const { supabaseUrl, supabaseKey } = useRuntimeConfig().public;
+const { supabaseUrl, supabaseKey } = useRuntimeConfig().public;
 
 // console.log('Supabase URL:', process.env.SUPABASE_URL);
 // console.log('Supabase Key:', process.env.SUPABASE_KEY);
+
+// console.log('Supabase URL:', process.env.NUXT_PUBLIC_SUPABASE_URL);
+// console.log('Supabase Key:', process.env.NUXT_PUBLIC_SUPABASE_KEY);
 
 // console.log('Supabase URL:', supabaseUrl);
 // console.log('Supabase Key:', supabaseKey);
@@ -52,6 +55,7 @@ const newTask = ref('');
 
 // Перевірка автентифікації
 const checkAuth = async () => {
+  console.log('checkAuth:', $supabase);
   const { data: { user: authUser } } = await $supabase.auth.getUser();
   user.value = authUser;
   if (authUser) fetchTasks();
@@ -59,6 +63,7 @@ const checkAuth = async () => {
 
 // Реєстрація
 const signUp = async () => {
+  console.log('signUp:', $supabase);
   const { data, error } = await $supabase.auth.signUp({
     email: email.value,
     password: password.value,
@@ -69,6 +74,7 @@ const signUp = async () => {
 
 // Вхід
 const signIn = async () => {
+  console.log('signIn:', $supabase);
   const { data, error } = await $supabase.auth.signInWithPassword({
     email: email.value,
     password: password.value,
@@ -79,6 +85,7 @@ const signIn = async () => {
 
 // Вихід
 const signOut = async () => {
+  console.log('signOut:', $supabase);
   const { error } = await $supabase.auth.signOut();
   if (error) alert(error.message);
   else user.value = null;
@@ -86,6 +93,7 @@ const signOut = async () => {
 
 // Отримання завдань
 const fetchTasks = async () => {
+  console.log('fetchTasks:', $supabase);
   const { data, error } = await $supabase
     .from('tasks')
     .select('*')
@@ -96,6 +104,7 @@ const fetchTasks = async () => {
 
 // Додавання завдання
 const addTask = async () => {
+  console.log('addTask:', $supabase);
   const { data, error } = await $supabase
     .from('tasks')
     .insert([{ title: newTask.value, user_id: user.value.id }]);
