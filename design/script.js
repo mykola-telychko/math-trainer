@@ -233,3 +233,9 @@ function startNewExercise() {
   alert('startNewExercise');
   console.log('startNewExercise');
 }
+
+
+
+
+
+function sendResult(){}

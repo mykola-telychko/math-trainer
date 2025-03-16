@@ -1,0 +1,7 @@
+PROMPT: - give code for work with indexDB . and function for add item .
+ in fn addItm call fn showUpdatedDb . 
+ work flow: 
+ initDb
+ check If exists db 
+ add new Itm(obj) -> show current db state 
+ - primitive prompmt: give me click counter for save result even if page reload
