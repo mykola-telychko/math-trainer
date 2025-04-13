@@ -1,3 +1,8 @@
+
+design 
+https://github.com/mykola-telychko/web-design-examples/blob/main/templates/concrete/index.html
+
+// ----
 - ERROR : nuxt doest see  .env 
 - ERROR : doest work CRUD
 
