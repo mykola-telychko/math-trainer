@@ -2,6 +2,21 @@
 design 
 https://github.com/mykola-telychko/web-design-examples/blob/main/templates/concrete/index.html
 
+LIST OF EXMPLS --> begin
+
+SIMILAR for SAMPLE ділення в стовпчик
+https://ua.onlinemschool.com/math/practice/arithmetic/addition_10/
+
+cайт схожий на казік
+https://www.houseofmath.com/
+
+https://mathema.me/worksheets/konspekty-urokiv/
+
+будує схему ділення в стовпчик
+https://uk.calcprofi.com/column-division-worksheets.html
+LIST OF EXMPLS --> begin
+
+
 // ----
 - ERROR : nuxt doest see  .env 
 - ERROR : doest work CRUD
